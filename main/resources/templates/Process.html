@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+</head>
+<body>
+<h2 th:text="'Welcome ' + ${employee.first_name} + '!!!!!'"></h2>
+
+<h2>Verify Your Details</h2>
+<ul>
+    <li><h2>Employee ID:</h2> <span th:text="${employee.employee_id}"></span></li>
+    <li><h2>First Name:</h2> <span th:text="${employee.first_name}"></span></li>
+    <li><h2>Last Name:</h2> <span th:text="${employee.last_name}"></span></li>
+    <li><h2>Email:</h2> <span th:text="${employee.email}"></span></li>
+    <li><h2>Date of Birth:</h2> <span th:text="${#temporals.format(employee.dob, 'dd-MM-yyyy')}"></span></li>
+</ul>
+
+<p th:text="${message}"></p>
+</body>
+</html>
